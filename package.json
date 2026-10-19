@@ -1,0 +1,7 @@
+{
+  "name": "hirn-exe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ein interaktiver Kurzurlaub von der Realität",
+  "scripts": { "start": "node server.js", "check": "node --check app.js && node --check server.js" }
+}

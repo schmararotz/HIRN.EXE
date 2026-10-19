@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#dfff00">
+  <meta name="description" content="HIRN.EXE – ein interaktiver Kurzurlaub von der Realität. Maus bewegen, Chaos bestellen, Ente werden.">
+  <title>HIRN.EXE — Realität hat kurz Pause.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <header class="topbar">
+    <a class="logo" href="#">HIRN<span>✳</span>EXE<small>DEIN GEHIRN IST GERADE OFFLINE.</small></a>
+    <div class="system-status"><i></i> ALLE SYSTEME: NAJA.</div>
+    <button id="calm" class="small-button" aria-pressed="false">◐ Ruhemodus</button>
+  </header>
+  <main>
+    <section class="playground" aria-labelledby="title">
+      <div class="grid-bg" aria-hidden="true"></div>
+      <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+      <div class="edition">INTERAKTIVER REALITÄTSVERLUST <span>VOL. 001 ↗</span></div>
+      <div class="intro"><div class="eyebrow"><span>● LIVE AUS DEM FIEBERTRAUM</span></div>
+        <h1 id="title">REALITÄT<br>HAT KURZ<br><span class="pause-word">PAUSE<span class="period">.</span></span></h1>
+        <p>Zu viele Tabs im Kopf? Perfekt.<br>Hier macht keiner Sinn. Aber alle machen mit.</p>
+        <button id="trip" class="primary-button" aria-pressed="false">GEHIRN AUS. TRIP AN. <span>↗</span></button>
+        <div class="microcopy">100% Unsinn. 0% Produktivität. Ehrenwort.</div>
+      </div>
+      <div class="scene" id="scene">
+        <div class="scene-label">BITTE NICHT FÜTTERN. <span>↘</span></div>
+        <div class="sticker sticker-pink">DU SIEHST<br>HEUTE SEHR<br><strong>404 AUS.</strong></div>
+        <button class="smiley" id="smiley" aria-label="Den Smiley anstupsen">
+          <span class="face-eyes"><span class="eye"><span class="pupil"></span></span><span class="eye"><span class="pupil"></span></span></span>
+          <span class="cheek left-cheek"></span><span class="cheek right-cheek"></span><span class="mouth"><span></span></span>
+        </button>
+        <span class="spark spark-one" aria-hidden="true">✳</span><span class="spark spark-two" aria-hidden="true">✦</span>
+        <button class="duck" id="duck" aria-label="Gummienten regnen lassen">🦆<span>EMOTIONALE<br>SUPPORT-ENTE</span></button>
+        <div class="sticker sticker-white">certified<br><strong>quatsch.</strong><span>★ ★ ★ ★ ★</span></div>
+        <div class="speech" id="speech" role="status">Ich bin nicht kaputt. Ich bin ein Feature.</div>
+        <div class="scene-bottom">↖ MAUS BEWEGEN. ER GUCKT WIRKLICH.</div>
+      </div>
+      <div class="vertical-note">KEIN PLAN IST AUCH EIN KONZEPT - PARADOX © 2026</div>
+    </section>
+    <div class="marquee" aria-hidden="true"><div>✳ BITTE BLEIBEN SIE UNVERNÜNFTIG &nbsp; ↗ REALITÄT WIRD ÜBERBEWERTET &nbsp; ✳ HUPEN WENN DU EINE ENTE BIST &nbsp; ↗ BITTE BLEIBEN SIE UNVERNÜNFTIG &nbsp; ✳ REALITÄT WIRD ÜBERBEWERTET &nbsp;</div></div>
+    <section class="controls" aria-label="Deine Chaos-Schaltzentrale">
+      <div class="control-heading"><span class="eyebrow">DEIN KLEINES KONTROLLZENTRUM</span><h2>Alles unter<br><s>Kontrolle.</s> Konfetti.</h2><span class="hand-note">Dreh ruhig durch. ↗</span></div>
+      <div class="control-box intensity"><div class="control-top"><span>01 / REALITÄTSREGLER</span><span id="intensity-value">65%</span></div><label for="intensity">Wie Banane darf's sein?</label><input id="intensity" type="range" min="0" max="100" value="65"><div class="range-labels"><span>Steuererklärung</span><span>Weltraumgurke</span></div></div>
+      <button class="control-box chaos-button" id="chaos"><span class="control-top">02 / ESKALATIONSABTEILUNG <span>↗</span></span><strong>Bitte nicht<br>drücken.</strong><span class="button-bottom">Du drückst sowieso. <span>✳</span></span></button>
+      <button class="control-box gravity-button" id="gravity" aria-pressed="false"><span class="control-top">03 / PHYSIK-EINSTELLUNGEN <span>↗</span></span><strong>Schwerkraft?<br>Überbewertet.</strong><span class="button-bottom" id="gravity-label">Abheben, bitte. <span>↑</span></span></button>
+    </section>
+  </main>
+  <footer><span>HANDGEMACHTER UNSINN. MIT EXTRA SENF.<small class="signature">ein kleiner Realitätsfehler von <strong>PARADOX</strong> ↗</small></span><span>Tipp: Leertaste = Chaos. G = schwerelos.</span><span id="chaos-count">00 AUSRASTER ↗</span></footer>
+  <aside class="music-bar" aria-label="Musikplayer"><button id="music-toggle" class="play-button" aria-label="Musik abspielen">▶</button><div class="track"><span class="track-kicker">DER SOUNDTRACK ZUM KONTROLLVERLUST</span><strong>Can't Hold Us × Bad Piggies <span>— DJ HRNYHORSE</span></strong><span id="music-status" role="status">Deine MP3 wartet auf ihren großen Auftritt.</span></div><div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><label class="volume-label" for="volume">VOL <input id="volume" type="range" min="0" max="1" step="0.01" value="0.55"></label><button class="file-button" id="choose-music" type="button">MP3 wählen ↗</button><input id="music-file" type="file" accept="audio/*" hidden></aside>
+  <audio id="audio" src="music/track.mp3" preload="none" loop></audio>
+</body>
+</html>
